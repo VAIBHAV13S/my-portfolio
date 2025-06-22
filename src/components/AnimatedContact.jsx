@@ -61,17 +61,15 @@ const AnimatedContact = () => {
       color: "hover:text-pink-400",
       bgColor: "hover:bg-pink-600/20"
     }
-  ];
-
-  return (
-    <motion.section 
-      id="contact" 
-      className="py-20 bg-gray-900/50 relative overflow-hidden"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
-      variants={containerVariants}
-    >
+  ];    return (
+        <motion.section 
+            id="contact" 
+            className="py-20 section-bg-tertiary relative overflow-hidden"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={containerVariants}
+        >
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-transparent to-purple-900/10"></div>
       
@@ -140,8 +138,9 @@ const AnimatedContact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`w-12 h-12 glass rounded-lg flex items-center justify-center text-gray-300 transition-all duration-300 border border-white/10 ${social.color} ${social.bgColor}`}
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileHover={{ scale: 1.2, rotate: 10 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ type: "spring", stiffness: 400 }}
                   >
                     <social.icon className="w-6 h-6" />
                   </motion.a>

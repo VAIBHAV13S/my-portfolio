@@ -52,9 +52,19 @@ const Experience = () => {
     ];
 
     return (
-        <section id="experience" className="py-20 bg-black/20">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
+        <motion.section 
+            id="experience" 
+            className="py-20 section-bg-secondary relative overflow-hidden"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={containerVariants}
+        >
+            {/* Background effects */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/5 via-transparent to-purple-900/5"></div>
+            
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <motion.div className="text-center mb-16" variants={itemVariants}>
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                         Experience
                     </h2>
@@ -62,7 +72,7 @@ const Experience = () => {
                     <p className="text-gray-300 max-w-2xl mx-auto">
                         My journey in leadership roles and community involvement, focusing on technical event management and team coordination.
                     </p>
-                </div>
+                </motion.div>
 
                 <div className="relative">
                     {/* Timeline line */}
@@ -140,7 +150,7 @@ const Experience = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 };
 

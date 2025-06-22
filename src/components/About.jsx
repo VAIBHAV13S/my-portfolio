@@ -1,32 +1,99 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { GraduationCap, Award, Code, Database, Globe, Zap } from 'lucide-react';
 
+// Register GSAP plugins
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
+
 const About = () => {
+    const sectionRef = useRef(null);
+
+    // Framer Motion: Component transitions only
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.1
+                staggerChildren: 0.1,
+                delayChildren: 0.2
             }
         }
     };
 
     const itemVariants = {
-        hidden: { opacity: 0, y: 30 },
+        hidden: { opacity: 0, y: 20 },
         visible: {
             opacity: 1,
             y: 0,
-            transition: { duration: 0.6, ease: "easeOut" }
+            transition: { duration: 0.6, ease: [0.23, 1, 0.32, 1] }
         }
     };
+
+    // GSAP: Scroll-triggered animations
+    useEffect(() => {
+        if (typeof window === "undefined") return;
+
+        const ctx = gsap.context(() => {
+            // Title reveal animation
+            gsap.fromTo('.about-title', {
+                y: 50,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1,
+                duration: 1,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: '.about-title',
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            // Content cards stagger animation
+            gsap.utils.toArray('.about-card').forEach((card, index) => {
+                gsap.fromTo(card, {
+                    y: 80,
+                    opacity: 0,
+                    scale: 0.9
+                }, {
+                    y: 0,
+                    opacity: 1,
+                    scale: 1,
+                    duration: 0.8,
+                    ease: "back.out(1.7)",
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    },
+                    delay: index * 0.2
+                });
+            });
+
+            // Interest items floating animation
+            gsap.to('.interest-item', {
+                y: -5,
+                duration: 2,
+                ease: "sine.inOut",
+                repeat: -1,
+                yoyo: true,
+                stagger: 0.3
+            });
+
+        }, sectionRef);
+
+        return () => ctx.revert();
+    }, []);
 
     return (
         <motion.section 
             id="about" 
-            className="py-20 bg-gray-900/50"
+            className="py-20 section-bg-primary"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}

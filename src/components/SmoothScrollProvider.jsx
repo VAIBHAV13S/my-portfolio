@@ -16,7 +16,7 @@ const SmoothScrollProvider = ({ children }) => {
 
     // Initialize Lenis for buttery smooth scrolling
     lenisRef.current = new Lenis({
-      duration: 1.2,
+      duration: 1.5,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       direction: 'vertical',
       gestureDirection: 'vertical',
@@ -36,7 +36,7 @@ const SmoothScrollProvider = ({ children }) => {
 
     gsap.ticker.lagSmoothing(0);
 
-    // Add scroll progress indicator
+    // Add enhanced scroll progress indicator
     const progressBar = document.createElement('div');
     progressBar.className = 'progress-bar';
     progressBar.style.cssText = `
@@ -44,16 +44,17 @@ const SmoothScrollProvider = ({ children }) => {
       top: 0;
       left: 0;
       width: 100%;
-      height: 3px;
-      background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+      height: 4px;
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899, #10b981);
       transform: scaleX(0);
       transform-origin: left center;
       z-index: 9999;
-      box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
+      border-radius: 0 0 2px 2px;
     `;
     document.body.appendChild(progressBar);
 
-    // Progress bar animation
+    // Enhanced progress bar animation
     gsap.to(progressBar, {
       scaleX: 1,
       ease: "none",
@@ -61,7 +62,7 @@ const SmoothScrollProvider = ({ children }) => {
         trigger: "body",
         start: "top top",
         end: "bottom bottom",
-        scrub: true
+        scrub: 0.5
       }
     });
 

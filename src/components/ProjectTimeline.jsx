@@ -20,7 +20,7 @@ const ProjectTimeline = () => {
       description: "Real-time synchronized YouTube music playbook app with sub-100ms sync accuracy and session analytics.",
       tech: ["React", "TypeScript", "Node.js", "YouTube API", "WebSockets"],
       github: "https://github.com/VAIBHAV13S/music-sync-app",
-      demo: "#",
+      demo: "https://music-sync-dm92i9q11-vaibhav13s-projects.vercel.app/",
       icon: <Zap className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500",
       position: "left"
@@ -32,7 +32,7 @@ const ProjectTimeline = () => {
       description: "Multiplayer typing game with real-time WPM tracking, JWT authentication, and interactive dashboards.",
       tech: ["Node.js", "Express", "WebSockets", "MySQL", "Chart.js"],
       github: "#",
-      demo: "https://racetyper.onrender.com",
+      demo: "https://racetyper.onrender.com/mainpage/main.html",
       icon: <Code className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500",
       position: "right"

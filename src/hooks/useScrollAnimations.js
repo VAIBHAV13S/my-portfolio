@@ -48,6 +48,16 @@ export const useSmoothScroll = () => {
   return lenisRef.current;
 };
 
+// This hook has been replaced by SmoothScrollProvider component
+// Keeping for reference but not in use
+
+/* Deprecated - Functionality moved to SmoothScrollProvider */
+/*
+This hook is no longer needed as all scroll animations 
+are now handled directly in the SmoothScrollProvider component
+for better performance and organization.
+*/
+
 export const useScrollAnimations = () => {
   useEffect(() => {
     if (typeof window === "undefined") return;

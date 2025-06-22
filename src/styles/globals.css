@@ -5,82 +5,194 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
 
-/* Dark theme by default */
+/* Enhanced modern dark theme with ultra-smooth gradients */
 html {
-  scroll-behavior: smooth;
-  background-color: #0a0a0a;
+  scroll-behavior: auto; /* Let Lenis handle smooth scrolling */
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+    linear-gradient(135deg, 
+      #030712 0%, 
+      #0f172a 15%, 
+      #1e293b 35%, 
+      #334155 50%, 
+      #1e293b 65%, 
+      #0f172a 85%, 
+      #030712 100%
+    );
+  background-attachment: fixed;
+  background-size: 100% 100%, 100% 100%, 100% 100%;
   color: #ffffff;
+  overflow-x: hidden;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #0a0a0a 0%, #111111 50%, #0f0f0f 100%);
+  background: transparent;
   min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Modern dark scrollbar */
+/* Ultra-smooth animated background overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: 
+    radial-gradient(ellipse 800px 600px at 20% 30%, rgba(59, 130, 246, 0.03) 0%, transparent 70%),
+    radial-gradient(ellipse 600px 800px at 80% 70%, rgba(139, 92, 246, 0.04) 0%, transparent 70%),
+    radial-gradient(ellipse 400px 400px at 40% 80%, rgba(236, 72, 153, 0.02) 0%, transparent 70%),
+    radial-gradient(ellipse 1000px 400px at 60% 20%, rgba(16, 185, 129, 0.02) 0%, transparent 70%);
+  z-index: -2;
+  animation: ultraSmoothFloat 40s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Ultra-smooth floating animation */
+@keyframes ultraSmoothFloat {
+  0%, 100% { 
+    transform: scale(1) rotate(0deg) translate(0, 0);
+    opacity: 0.6;
+  }
+  25% { 
+    transform: scale(1.05) rotate(1deg) translate(-10px, -20px);
+    opacity: 0.8;
+  }
+  50% { 
+    transform: scale(1.1) rotate(2deg) translate(20px, -10px);
+    opacity: 1;
+  }
+  75% { 
+    transform: scale(1.05) rotate(1deg) translate(-5px, 10px);
+    opacity: 0.8;
+  }
+}
+
+/* Modern section backgrounds with seamless transitions */
+.section-bg-primary {
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.6) 0%,
+    rgba(30, 41, 59, 0.4) 50%,
+    rgba(15, 23, 42, 0.6) 100%
+  );
+}
+
+.section-bg-secondary {
+  background: linear-gradient(
+    180deg,
+    rgba(30, 41, 59, 0.4) 0%,
+    rgba(51, 65, 85, 0.3) 50%,
+    rgba(30, 41, 59, 0.4) 100%
+  );
+}
+
+.section-bg-tertiary {
+  background: linear-gradient(
+    180deg,
+    rgba(51, 65, 85, 0.3) 0%,
+    rgba(71, 85, 105, 0.2) 50%,
+    rgba(51, 65, 85, 0.3) 100%
+  );
+}
+
+/* Ultra-modern scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #1a1a1a;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #3b82f6, #8b5cf6);
+  background: rgba(15, 15, 35, 0.8);
   border-radius: 10px;
 }
 
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #3b82f6, #8b5cf6, #ec4899);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #2563eb, #7c3aed);
+  background: linear-gradient(180deg, #2563eb, #7c3aed, #db2777);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.8);
 }
 
-/* Smooth animations and modern effects */
+/* Smooth transitions for everything */
 * {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* Glassmorphism utility */
+/* Enhanced glassmorphism with better blur */
 .glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
-/* Neon glow effects */
+/* Modern neon glow system */
 .neon-glow {
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  box-shadow: 
+    0 0 20px rgba(59, 130, 246, 0.4),
+    0 0 40px rgba(59, 130, 246, 0.2),
+    0 0 80px rgba(59, 130, 246, 0.1);
 }
 
 .neon-text {
-  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  text-shadow: 
+    0 0 10px rgba(59, 130, 246, 0.8),
+    0 0 20px rgba(59, 130, 246, 0.6),
+    0 0 40px rgba(59, 130, 246, 0.4);
 }
 
-/* Modern grid background */
+/* Animated gradient grid */
 .grid-bg {
   background-image: 
     linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
+  background-size: 60px 60px;
+  animation: gridMove 30s linear infinite;
 }
 
-/* Gradient text */
+@keyframes gridMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(60px, 60px); }
+}
+
+/* Modern gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 40%, #ec4899 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: gradientShift 3s ease-in-out infinite;
 }
 
-/* Header fade effect */
+@keyframes gradientShift {
+  0%, 100% { filter: hue-rotate(0deg); }
+  50% { filter: hue-rotate(20deg); }
+}
+
+/* Enhanced header fade */
 .header-fade {
   background: linear-gradient(180deg, 
-    rgba(0, 0, 0, 0.9) 0%, 
-    rgba(0, 0, 0, 0.7) 40%, 
-    rgba(0, 0, 0, 0.3) 70%, 
+    rgba(10, 10, 15, 0.95) 0%, 
+    rgba(15, 15, 35, 0.85) 20%,
+    rgba(22, 33, 62, 0.75) 40%,
+    rgba(26, 26, 46, 0.6) 60%,
+    rgba(15, 15, 35, 0.4) 80%,
     transparent 100%);
-  height: 120px;
+  height: 140px;
 }
 
 /* Seamless section transitions */

@@ -21,25 +21,24 @@ const EnhancedHero = () => {
     if (typeof window === "undefined") return;
 
     const ctx = gsap.context(() => {
-      // Jaw-dropping entrance sequence
+      // GSAP: Entrance animations and scroll effects
       const tl = gsap.timeline();
       
-      // Initial setup - hide everything
+      // Initial setup
       gsap.set(['.hero-text', '.hero-buttons', '.hero-social'], { 
         opacity: 0, 
         y: 100 
       });
       gsap.set('.hero-character', { 
         opacity: 0, 
-        scale: 0.5, 
-        rotation: -10 
+        scale: 0.5
       });
       gsap.set('.bg-orb', { 
         scale: 0, 
         opacity: 0 
       });
 
-      // Epic entrance animation
+      // Entrance sequence with GSAP
       tl.to('.bg-orb', {
         scale: 1,
         opacity: 1,
@@ -50,7 +49,6 @@ const EnhancedHero = () => {
       .to('.hero-character', {
         opacity: 1,
         scale: 1,
-        rotation: 0,
         duration: 1.5,
         ease: "back.out(1.7)"
       }, "-=1")
@@ -61,20 +59,15 @@ const EnhancedHero = () => {
         ease: "power3.out",
         stagger: 0.2
       }, "-=0.5")
-      .to('.hero-buttons', {
+      .to(['.hero-buttons', '.hero-social'], {
         opacity: 1,
         y: 0,
         duration: 0.8,
-        ease: "back.out(1.7)"
-      }, "-=0.3")
-      .to('.hero-social', {
-        opacity: 1,
-        y: 0,
-        duration: 0.6,
-        ease: "power2.out"
-      }, "-=0.2");
+        ease: "back.out(1.7)",
+        stagger: 0.1
+      }, "-=0.3");
 
-      // Scroll-triggered parallax and morphing effects
+      // Scroll-triggered parallax (GSAP only)
       ScrollTrigger.create({
         trigger: heroRef.current,
         start: "top top",
@@ -83,30 +76,24 @@ const EnhancedHero = () => {
         onUpdate: (self) => {
           const progress = self.progress;
           
-          // Character morphing during scroll
           gsap.to(characterRef.current, {
             scale: 1 - progress * 0.2,
             y: progress * -100,
-            rotation: progress * 5,
             duration: 0.3
           });
           
-          // Background orbs parallax
           gsap.to('.bg-orb-1', {
             x: progress * -200,
             y: progress * -100,
-            scale: 1 + progress * 0.5,
             duration: 0.3
           });
           
           gsap.to('.bg-orb-2', {
             x: progress * 200,
             y: progress * -150,
-            scale: 1 + progress * 0.3,
             duration: 0.3
           });
           
-          // Text parallax
           gsap.to('.hero-text', {
             y: progress * -50,
             opacity: 1 - progress * 0.5,
@@ -115,7 +102,7 @@ const EnhancedHero = () => {
         }
       });
 
-      // Floating particles animation
+      // Continuous particle animation
       gsap.to('.particle', {
         y: -20,
         x: "random(-20, 20)",
@@ -127,28 +114,6 @@ const EnhancedHero = () => {
           amount: 2,
           from: "random"
         }
-      });
-
-      // Hover effects for interactive elements
-      const buttons = document.querySelectorAll('.hero-button');
-      buttons.forEach(button => {
-        button.addEventListener('mouseenter', () => {
-          gsap.to(button, {
-            scale: 1.05,
-            y: -2,
-            duration: 0.3,
-            ease: "power2.out"
-          });
-        });
-        
-        button.addEventListener('mouseleave', () => {
-          gsap.to(button, {
-            scale: 1,
-            y: 0,
-            duration: 0.3,
-            ease: "power2.out"
-          });
-        });
       });
 
     }, heroRef);
