@@ -252,7 +252,7 @@ const EnhancedHero = () => {
           >
             {[
               { href: "https://github.com/VAIBHAV13S", icon: Github },
-              { href: "https://linkedin.com/in/vaibhav-sharma", icon: Linkedin },
+              { href: "https://www.linkedin.com/in/vaibhav-sharma-8b7b10291", icon: Linkedin },
               { href: "mailto:vaibhavsharmsk125@gmail.com", icon: Mail }
             ].map((social, index) => (
               <motion.a

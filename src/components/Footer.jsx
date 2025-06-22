@@ -56,7 +56,7 @@ const Footer = () => {
                                 </svg>
                             </motion.a>
                             <motion.a
-                                href="https://linkedin.com/in/vaibhav-sharma"
+                                href="https://www.linkedin.com/in/vaibhav-sharma-8b7b10291"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-400 hover:text-white transition-colors"
@@ -180,7 +180,7 @@ const Footer = () => {
                             animate={{ scale: [1, 1.05, 1] }}
                             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                         >
-                            🚀 Currently organizing Electrothon 7.0 - MLH 2025 at NIT Hamirpur
+                            Learning, Developing and Deploying.
                         </motion.p>
                     </div>
                 </motion.div>

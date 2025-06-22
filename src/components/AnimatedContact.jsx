@@ -50,7 +50,7 @@ const AnimatedContact = () => {
       bgColor: "hover:bg-gray-700/30"
     },
     { 
-      href: "https://linkedin.com/in/vaibhav-sharma", 
+      href: "https://www.linkedin.com/in/vaibhav-sharma-8b7b10291", 
       icon: Linkedin, 
       color: "hover:text-blue-400",
       bgColor: "hover:bg-blue-600/20"
