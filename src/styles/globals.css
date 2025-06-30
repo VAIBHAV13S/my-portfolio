@@ -427,300 +427,6 @@ body {
   bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
-}
-
-.hoodie-zipper {
-  width: 3px;
-  height: 80px;
-  background: linear-gradient(to bottom, #94a3b8, #64748b);
-  position: absolute;
-  left: 50%;
-  top: 10px;
-  transform: translateX(-50%);
-  border-radius: 2px;
-}
-
-/* Arms */
-.arm {
-  position: absolute;
-  width: 35px;
-  height: 80px;
-  background: linear-gradient(145deg, #3b82f6, #1e40af);
-  border-radius: 20px;
-  top: 120px;
-}
-
-.arm-left {
-  left: calc(50% - 65px);
-  transform-origin: top center;
-}
-
-.arm-right {
-  right: calc(50% - 65px);
-  transform-origin: top center;
-}
-
-.hand {
-  width: 25px;
-  height: 25px;
-  background: linear-gradient(145deg, #fef3c7, #fbbf24);
-  border-radius: 50%;
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 2px 8px rgba(251, 191, 36, 0.3);
-}
-
-/* Gaming Setup */
-.gaming-setup {
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.laptop-base {
-  width: 120px;
-  height: 15px;
-  background: linear-gradient(145deg, #374151, #1f2937);
-  border-radius: 8px;
-  position: relative;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.laptop-screen {
-  width: 100px;
-  height: 70px;
-  background: linear-gradient(145deg, #1f2937, #111827);
-  border-radius: 5px 5px 0 0;
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 2px solid #374151;
-  overflow: hidden;
-}
-
-.screen-content {
-  padding: 8px;
-  height: 100%;
-  background: rgba(30, 64, 175, 0.1);
-}
-
-.code-line {
-  height: 8px;
-  background: linear-gradient(90deg, #3b82f6, #1e40af);
-  margin: 4px 0;
-  border-radius: 2px;
-  opacity: 0.8;
-}
-
-.keyboard {
-  width: 80px;
-  height: 8px;
-  background: linear-gradient(145deg, #374151, #1f2937);
-  border-radius: 4px;
-  position: absolute;
-  bottom: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Code Particles */
-.code-particles-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: visible;
-}
-
-.code-particle {
-  position: absolute;
-  font-size: 12px;
-  font-weight: bold;
-  color: #3b82f6;
-  background: rgba(59, 130, 246, 0.1);
-  padding: 4px 8px;
-  border-radius: 6px;
-  border: 1px solid rgba(59, 130, 246, 0.3);
-  font-family: 'JetBrains Mono', monospace;
-  backdrop-filter: blur(4px);
-  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
-}
-
-.code-particle:nth-child(1) { top: 10%; left: 20%; }
-.code-particle:nth-child(2) { top: 15%; right: 25%; }
-.code-particle:nth-child(3) { top: 30%; left: 10%; }
-.code-particle:nth-child(4) { top: 45%; right: 15%; }
-.code-particle:nth-child(5) { top: 60%; left: 25%; }
-.code-particle:nth-child(6) { top: 75%; right: 20%; }
-.code-particle:nth-child(7) { top: 85%; left: 15%; }
-.code-particle:nth-child(8) { top: 20%; right: 10%; }
-
-.anime-character {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.energy-aura {
-  position: absolute;
-  width: 450px;
-  height: 400px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(139, 92, 246, 0.1) 50%, transparent 80%);
-  border-radius: 50%;
-  z-index: -1;
-}
-
-/* Character Head */
-.anime-head {
-  width: 100px;
-  height: 100px;
-  background: linear-gradient(145deg, #fef3c7, #fbbf24);
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  top: 30px;
-  transform: translateX(-50%);
-  box-shadow: 0 8px 25px rgba(251, 191, 36, 0.4);
-  border: 3px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Hair */
-.anime-hair {
-  width: 110px;
-  height: 70px;
-  background: linear-gradient(145deg, #1e293b, #334155);
-  border-radius: 55px 55px 25px 25px;
-  position: absolute;
-  left: 50%;
-  top: 15px;
-  transform: translateX(-50%);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.hair-spike {
-  position: absolute;
-  background: linear-gradient(145deg, #1e293b, #475569);
-  border-radius: 50% 50% 50% 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.hair-spike-1 {
-  width: 30px;
-  height: 40px;
-  top: -20px;
-  left: 15px;
-  transform: rotate(-25deg);
-}
-
-.hair-spike-2 {
-  width: 25px;
-  height: 35px;
-  top: -15px;
-  left: 42px;
-  transform: rotate(5deg);
-}
-
-.hair-spike-3 {
-  width: 28px;
-  height: 38px;
-  top: -18px;
-  right: 15px;
-  transform: rotate(30deg);
-}
-
-.hair-spike-4 {
-  width: 20px;
-  height: 30px;
-  top: -10px;
-  right: 35px;
-  transform: rotate(-10deg);
-}
-
-/* Eyes */
-.anime-eyes {
-  position: absolute;
-  top: 55px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.anime-eye {
-  width: 16px;
-  height: 20px;
-  background: radial-gradient(circle, #3b82f6, #1e40af);
-  border-radius: 50%;
-  position: absolute;
-  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3);
-}
-
-.eye-left { left: -25px; }
-.eye-right { right: -25px; }
-
-.anime-eye::before {
-  content: '';
-  width: 8px;
-  height: 10px;
-  background: #60a5fa;
-  border-radius: 50%;
-  position: absolute;
-  top: 3px;
-  left: 3px;
-}
-
-.anime-eye::after {
-  content: '';
-  width: 3px;
-  height: 4px;
-  background: #ffffff;
-  border-radius: 50%;
-  position: absolute;
-  top: 4px;
-  left: 4px;
-}
-
-/* Mouth */
-.anime-mouth {
-  width: 8px;
-  height: 4px;
-  background: #1f2937;
-  border-radius: 0 0 8px 8px;
-  position: absolute;
-  top: 75px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Body */
-.anime-body {
-  width: 80px;
-  height: 120px;
-  background: linear-gradient(145deg, #3b82f6, #1e40af);
-  border-radius: 40px 40px 20px 20px;
-  position: absolute;
-  left: 50%;
-  top: 110px;
-  transform: translateX(-50%);
-  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.5);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-}
-
-.hoodie-pocket {
-  width: 50px;
-  height: 30px;
-  background: rgba(30, 64, 175, 0.4);
-  border-radius: 20px;
-  position: absolute;
-  bottom: 25px;
-  left: 50%;
-  transform: translateX(-50%);
   border: 2px solid rgba(96, 165, 250, 0.6);
 }
 
@@ -966,4 +672,66 @@ body {
     opacity: 0;
     transform: translateY(-80px);
   }
+}
+
+/* Add this to your global CSS file if needed */
+
+/* Ensure proper z-index stacking */
+.hero-social-links {
+  position: relative;
+  z-index: 40;
+}
+
+.hero-social-links a {
+  position: relative;
+  z-index: 50;
+}
+
+/* Header should be above everything except modals */
+header {
+  z-index: 50;
+}
+
+/* Ensure proper stacking context */
+.section-container {
+  position: relative;
+  z-index: 10;
+}
+
+/* Add these performance optimizations at the end of your globals.css */
+
+/* Performance optimizations */
+.reduce-motion * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+.low-performance * {
+  --blur-intensity: 5px;
+  --particle-count: 3;
+}
+
+/* Hardware acceleration */
+.hardware-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Optimize animations for mobile */
+@media (max-width: 768px) {
+  .grid-bg {
+    animation-duration: 60s; /* Slower on mobile */
+  }
+  
+  .floating-elements {
+    display: none; /* Hide complex elements on mobile */
+  }
+}
+
+/* Preload critical fonts */
+@font-face {
+  font-family: 'Inter';
+  font-display: swap;
+  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 }
