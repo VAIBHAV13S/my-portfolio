@@ -282,7 +282,7 @@ const EnhancedHero = () => {
             </motion.div>
             
             <motion.a
-              href="/resume.pdf"
+              href="/Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="glass border border-blue-400/30 text-blue-400 hover:bg-blue-600/10 hover:border-blue-400/50 px-8 py-4 rounded-xl font-medium transition-all duration-300 flex items-center gap-3 group"
@@ -296,7 +296,7 @@ const EnhancedHero = () => {
 
           {/* Enhanced social links - Fixed positioning */}
           <motion.div 
-            className="flex justify-center space-x-8 pt-4 pb-16 relative z-40"
+            className="flex justify-center space-x-8 pb-20 relative z-40"
             variants={itemVariants}
             style={{ 
               position: 'relative',
@@ -328,7 +328,7 @@ const EnhancedHero = () => {
 
       {/* Enhanced scroll indicator with ChevronDown */}
       <motion.div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer group z-30"
+        className="absolute bottom-1 centre transform -translate-x-1/2 cursor-pointer group z-30 "
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 2, duration: 0.8 }}
@@ -340,7 +340,7 @@ const EnhancedHero = () => {
           smooth={true}
           duration={800}
           offset={-80}
-          className="flex flex-col items-center space-y-2 text-gray-400 hover:text-blue-400 transition-colors duration-300"
+          className="flex flex-col items-center space-y-2 text-gray-400 hover:text-blue-400 transition-colors duration-300 "
         >
           <motion.div
             animate={{ y: [0, -8, 0] }}
