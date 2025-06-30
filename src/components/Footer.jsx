@@ -87,8 +87,7 @@ const Footer = () => {
         >
             {/* Clean Background */}
             <div className="absolute inset-0">
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-gray-900 to-transparent" />
-                <div className="absolute inset-0 grid-bg opacity-5" />
+            <div className="absolute inset-0 grid-bg opacity-10" />
                 
                 <motion.div 
                     className="absolute top-10 left-10 w-64 h-64 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-full blur-3xl"

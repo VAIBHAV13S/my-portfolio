@@ -376,21 +376,6 @@ const AnimatedContact = () => {
               </motion.button>
             </form>
 
-            {/* Form Footer Note */}
-            <motion.div 
-              className="mt-6 p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                <p className="text-sm text-gray-300">
-                  <span className="text-blue-400 font-medium">Pro tip:</span> Include details about your project timeline and budget for faster response!
-                </p>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
 
